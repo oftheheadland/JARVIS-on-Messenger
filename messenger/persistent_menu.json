@@ -123,6 +123,11 @@
                 },
                 {
                   "type": "postback",
+                  "title": "math",
+                  "payload": "{\"entities\": {\"time_location\":[{\"value\":\"seattle\"}]}, \"intent\": \"math\"}"
+                },
+                {
+                  "type": "postback",
                   "title": "weather in london",
                   "payload": "{\"entities\": {\"weather_location\":[{\"value\":\"london\"}]}, \"intent\": \"weather\"}"
                 }

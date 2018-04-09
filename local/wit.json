@@ -9,6 +9,12 @@
 			"value": "linkin park"
 		}]
 	},
+	"math 4*4": {
+		"intent": "math",
+		"entities": [{
+			"value": "4*4"
+		}]
+	},
 	"test": {
 		"intent": "xkcd",
 		"entities": []

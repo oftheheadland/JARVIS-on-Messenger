@@ -49,7 +49,11 @@ def search(input, sender=None, postback=False):
         intent = payload['intent']
         entities = payload['entities']
     else:
-        intent, entities = process_query(input)
+        if "math" in input:
+            intent = "math"
+            entities = input.replace("math", "")
+        else:
+            intent, entities = process_query(input)
     # TODO: Needs to be refactored out
     try:
         keen.project_id = os.environ.get('KEEN_PROJECT_ID', config.KEEN_PROJECT_ID)
