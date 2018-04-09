@@ -28,6 +28,8 @@ def process_query(input):
         if input.lower() in wit_local_data:
             return wit_local_data[input.lower()]['intent'], wit_local_data[input.lower()]['entities']
     try:
+        #old one
+        #r = requests.get('https://api.wit.ai/message?v=20160420&q=' + input, headers={
         r = requests.get('https://api.wit.ai/message?v=20180409&q=' + input, headers={
             'Authorization': 'Bearer %s' % WIT_AI_ACCESS_TOKEN
         })
