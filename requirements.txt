@@ -41,3 +41,4 @@ Werkzeug==0.11.8
 wikipedia==1.4.0
 wolframalpha==3.0.1
 pytz==2018.4
+imdbparser==1.0.13

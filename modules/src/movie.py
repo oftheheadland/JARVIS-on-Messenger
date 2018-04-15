@@ -1,6 +1,6 @@
 import os
 from imdb import IMDb
-
+from imdbparser import IMDb
 import requests
 import requests_cache
 
@@ -17,33 +17,33 @@ def process(input, entities):
     try:
         movie = entities['movie'][0]['value']
 
-        with requests_cache.enabled('movie_cache', backend='sqlite', expire_after=86400):
-            # Make a search request to the API to get the movie's TMDb ID
-            r = requests.get('http://api.themoviedb.org/3/search/movie', params={
-                'api_key': TMDB_API_KEY,
-                'query': movie,
-                'include_adult': False
-            })
-            data = r.json()
+        # Make a search request to the API to get the movie's TMDb ID
+        r = requests.get('http://api.themoviedb.org/3/search/movie', params={
+            'api_key': TMDB_API_KEY,
+            'query': movie,
+            'include_adult': False
+        })
+        data = r.json()
 
-            assert (len(data['results']) > 0)
-            tmdb_id = str(data['results'][0]['id'])
+        assert (len(data['results']) > 0)
+        tmdb_id = str(data['results'][0]['id'])
 
-            # Make another request to the API using the movie's TMDb ID to get the movie's IMDb ID
-            r = requests.get('https://api.themoviedb.org/3/movie/' + tmdb_id, params={
-                'api_key': TMDB_API_KEY,
-                'append_to_response': 'videos'
-            })
-            data = r.json()
+        # Make another request to the API using the movie's TMDb ID to get the movie's IMDb ID
+        r = requests.get('https://api.themoviedb.org/3/movie/' + tmdb_id, params={
+            'api_key': TMDB_API_KEY,
+            'append_to_response': 'videos'
+        })
+        data = r.json()
 
         # Fetch movie rating from IMDb
         ia = IMDb()
         imdb_id = data['imdb_id']
         imdb_movie = ia.get_movie(imdb_id[2:])
+        imdb_movie.fetch()
 
         template = TextTemplate('Title: ' + data['title'] +
                                 '\nYear: ' + data['release_date'][:4] +
-                                '\nIMDb Rating: ' + str(imdb_movie['rating']) + ' / 10' +
+                                '\nIMDb Rating: ' + str(imdb_movie.__dict__['rating']) + ' / 10' +
                                 '\nOverview: ' + data['overview'])
         text = template.get_text()
         template = ButtonTemplate(text)
