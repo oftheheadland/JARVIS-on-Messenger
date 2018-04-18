@@ -1,5 +1,6 @@
 # Facebook (+ Wit)
-ACCESS_TOKEN = '<<ACCESS_TOKEN>>'
+ACCESS_TOKEN = 'EAAKBmObz6x0BANqu2prUKs3GpkX9KUnZBKOTigbcPj4J6lZCjqnkgBTZBN8dZC20G7cpQcTqZBMZAob7bGCjlZC5sbVcwC' \
+               'fRSX05xvM1jOcaZBcwfDeUZBZAB07xebKTLXx580t3MepOvyJH198OceAK92Przm5tjgcYl9SMeDKkxxewZDZD'
 VERIFY_TOKEN = '<<VERIFY_TOKEN>>'
 
 #old wit token
