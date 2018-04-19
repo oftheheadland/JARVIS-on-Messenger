@@ -21,18 +21,9 @@ dice_sides = {
     6: 'http://fa2png.io/media/icons/foundation-icon-fonts/2015-02-16/die-six/256/0/e74c3c_none.png'
 }
 
-
-def processAnimate(input, entities=None):
-    message1 = AttachmentTemplate(dice_sidesAnimate[random.randint(1, 6)], type='image').get_message()
-    output = {
-        'input': input,
-        'output': message1,
-        'success': True
-    }
-    return output
-
 def process(input, entities=None):
-    message = AttachmentTemplate(dice_sides[random.randint(1, 6)], type='image').get_message()
+    message = AttachmentTemplate(dice_sidesAnimate[random.randint(1, 6)], type='image').get_message()
+    message = AttachmentTemplate(dice_sides[random.randint(1, 6)], type='image').get_message(),
     message = add_quick_reply(message, 'Roll again!', modules.generate_postback('dice'))
     message = add_quick_reply(message, 'Flip a coin.', modules.generate_postback('coin'))
     output = {
