@@ -24,7 +24,8 @@ dice_sides = {
 
 def process(input, entities=None):
     message = AttachmentTemplate(dice_sides[random.randint(1, 6)], type='image').get_message()
-    message += AttachmentTemplate(diceAnim[random.randint(1, 6)], type='image').get_message()
+    print message
+    #message += AttachmentTemplate(diceAnim[random.randint(1, 6)], type='image').get_message()
     message = add_quick_reply(message, 'Roll again!', modules.generate_postback('dice'))
     message = add_quick_reply(message, 'Flip a coin.', modules.generate_postback('coin'))
     output = {
