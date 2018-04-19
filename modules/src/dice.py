@@ -26,7 +26,7 @@ def processAnimate(input, entities=None):
     message1 = AttachmentTemplate(dice_sidesAnimate[random.randint(1, 6)], type='image').get_message()
     output = {
         'input': input,
-        'animate': message1,
+        'output': message1,
         'success': True
     }
     return output
