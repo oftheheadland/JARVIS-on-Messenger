@@ -42,7 +42,7 @@ def process(input, entities):
 
         #output['input'] = input
         output['input'] = ''
-        output['output'] = TextTemplate('Result from wolframpalpha: ' + texts).get_message()
+        output['output'] = TextTemplate('Result from WolframAlpha: ' + texts).get_message()
         #output['output'] = texts
         output['success'] = True
     except:
