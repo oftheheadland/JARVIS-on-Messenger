@@ -32,7 +32,7 @@ def process(input, entities):
                 texts = "input: " + pod.text + "\n"
                 texts = texts.encode('ascii', 'ignore')
             if counter > 0:
-                texts += "  result: " + pod.text
+                texts += pod.text
                 break
             counter += 1
 
@@ -40,7 +40,8 @@ def process(input, entities):
         #texts = texts.encode('ascii', 'ignore')
         #print(texts)
 
-        output['input'] = input
+        #output['input'] = input
+        output['input'] = ''
         output['output'] = TextTemplate('Result from wolframpalpha: ' + texts).get_message()
         #output['output'] = texts
         output['success'] = True
