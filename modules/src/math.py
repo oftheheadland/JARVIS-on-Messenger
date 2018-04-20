@@ -41,8 +41,8 @@ def process(input, entities):
         #print(texts)
 
         output['input'] = input
-        #output['output'] = TextTemplate('Result from wolframpalpha: ' + texts).get_message()
-        output['output'] = texts
+        output['output'] = TextTemplate('Result from wolframpalpha: ' + texts).get_message()
+        #output['output'] = texts
         output['success'] = True
     except:
         error_message = 'I couldn\'t get the right answer for that.'
