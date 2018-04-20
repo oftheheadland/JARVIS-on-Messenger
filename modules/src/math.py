@@ -25,12 +25,12 @@ def process(input, entities):
         # res = client.query(response)
         input = input.replace("math", "")
         res = client.query(input)
-
+        texts = ""
         counter = 0
         for pod in res.pods:
-            if counter == 0:
-                texts = "input: " + pod.text + "\n"
-                texts = texts.encode('ascii', 'ignore')
+            #if counter == 0:
+            #    texts = "input: " + pod.text + "\n"
+            #    texts = texts.encode('ascii', 'ignore')
             if counter > 0:
                 texts += pod.text
                 break
