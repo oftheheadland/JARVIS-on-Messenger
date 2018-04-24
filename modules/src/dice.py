@@ -5,12 +5,12 @@ from templates.attachment import AttachmentTemplate
 from templates.quick_replies import add_quick_reply
 
 dice_sides = {
-    1: 'https://gfycat.com/UnconsciousLegalDoe',
-    2: 'https://gfycat.com/UnconsciousLegalDoe',
-    3: 'https://gfycat.com/UnconsciousLegalDoe',
-    4: 'https://gfycat.com/UnconsciousLegalDoe',
-    5: 'https://gfycat.com/UnconsciousLegalDoe',
-    6: 'https://gfycat.com/UnconsciousLegalDoe',
+    1: 'https://thumbs.gfycat.com/FatherlyFrighteningInganue-size_restricted.gif',
+    2: 'https://thumbs.gfycat.com/FatherlyFrighteningInganue-size_restricted.gif',
+    3: 'https://thumbs.gfycat.com/FatherlyFrighteningInganue-size_restricted.gif',
+    4: 'https://thumbs.gfycat.com/FatherlyFrighteningInganue-size_restricted.gif',
+    5: 'https://thumbs.gfycat.com/FatherlyFrighteningInganue-size_restricted.gif',
+    6: 'https://thumbs.gfycat.com/FatherlyFrighteningInganue-size_restricted.gif',
 }
 
 
