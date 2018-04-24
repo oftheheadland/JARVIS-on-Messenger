@@ -25,14 +25,14 @@ def process(input, entities):
         # res = client.query(response)
         input = input.replace("math", "")
         res = client.query(input)
-
+        texts = ""
         counter = 0
         for pod in res.pods:
-            if counter == 0:
-                texts = "input: " + pod.text + "\n"
-                texts = texts.encode('ascii', 'ignore')
+            #if counter == 0:
+            #    texts = "input: " + pod.text + "\n"
+            #    texts = texts.encode('ascii', 'ignore')
             if counter > 0:
-                texts += "  result: " + pod.text
+                texts += pod.text
                 break
             counter += 1
 
@@ -40,9 +40,10 @@ def process(input, entities):
         #texts = texts.encode('ascii', 'ignore')
         #print(texts)
 
-        output['input'] = input
-        #output['output'] = TextTemplate('Result from wolframpalpha: ' + texts).get_message()
-        output['output'] = texts
+        #output['input'] = input
+        output['input'] = ''
+        output['output'] = TextTemplate('Result from WolframAlpha: ' + texts).get_message()
+        #output['output'] = texts
         output['success'] = True
     except:
         error_message = 'I couldn\'t get the right answer for that.'

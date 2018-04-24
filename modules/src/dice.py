@@ -5,12 +5,12 @@ from templates.attachment import AttachmentTemplate
 from templates.quick_replies import add_quick_reply
 
 dice_sides = {
-    1: 'http://fa2png.io/media/icons/foundation-icon-fonts/2015-02-16/die-one/256/0/e74c3c_none.png',
-    2: 'http://fa2png.io/media/icons/foundation-icon-fonts/2015-02-16/die-two/256/0/e74c3c_none.png',
-    3: 'http://fa2png.io/media/icons/foundation-icon-fonts/2015-02-16/die-three/256/0/e74c3c_none.png',
-    4: 'http://fa2png.io/media/icons/foundation-icon-fonts/2015-02-16/die-four/256/0/e74c3c_none.png',
-    5: 'http://fa2png.io/media/icons/foundation-icon-fonts/2015-02-16/die-five/256/0/e74c3c_none.png',
-    6: 'http://fa2png.io/media/icons/foundation-icon-fonts/2015-02-16/die-six/256/0/e74c3c_none.png'
+    1: 'https://thumbs.gfycat.com/FatherlyFrighteningInganue-size_restricted.gif',
+    2: 'https://thumbs.gfycat.com/FatherlyFrighteningInganue-size_restricted.gif',
+    3: 'https://thumbs.gfycat.com/FatherlyFrighteningInganue-size_restricted.gif',
+    4: 'https://thumbs.gfycat.com/FatherlyFrighteningInganue-size_restricted.gif',
+    5: 'https://thumbs.gfycat.com/FatherlyFrighteningInganue-size_restricted.gif',
+    6: 'https://thumbs.gfycat.com/FatherlyFrighteningInganue-size_restricted.gif',
 }
 
 
