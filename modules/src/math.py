@@ -1,10 +1,6 @@
 import wolframalpha
 
 
-
-
-
-
 import os
 from datetime import datetime
 
