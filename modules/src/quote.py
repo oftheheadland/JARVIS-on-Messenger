@@ -30,7 +30,7 @@ def process(input, entities=None):
         #with open(config.QUOTES_SOURCE_FILE) as quotes_file:
             #quotes = json.load(quotes_file)
             #quotes_list = quotes['quotes']
-        message = TextTemplate(choice(quotes)).get_message()
+        message = TextTemplate(quotes).get_message()
             #message = add_quick_reply(message, 'Another one!', modules.generate_postback('quote'))
         message = add_quick_reply(message, 'Show me a fact.', modules.generate_postback('fact'))
         message = add_quick_reply(message, 'Tell me a joke.', modules.generate_postback('joke'))
