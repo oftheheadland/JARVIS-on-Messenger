@@ -22,6 +22,8 @@ def process(input, entities):
             entities['time_location'][0]['value'] + '&limit=1')
         location_data = r.json()
 
+        input = input.lower()
+
         if "brazil" in input:
 
             print(entities['time_location'][0]['value'])
